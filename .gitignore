@@ -9,3 +9,6 @@
 
 # Do not ignore the file mi_primer_topic
 !mi_primer_topic/
+
+# Dp not ignore Postman
+!Kafka\ Collection.postman_collection.json
