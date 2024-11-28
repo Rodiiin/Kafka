@@ -11,11 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/kafka")
 public class KafkaController {
 
+    // Automatically inject the ProducerService bean
     @Autowired
     private ProducerService producer;
 
+    // Endpoint to publish messages to Kafka topic
     @PostMapping("/publish")
     public void sendMessageToKafkaTopic(@RequestParam("message") String message) {
+        // Use the producer service to send the message
         producer.sendMessage(message);
     }
 }
+
